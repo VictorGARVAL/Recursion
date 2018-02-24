@@ -1,0 +1,26 @@
+//Recursión v0.1
+
+/**Método de busqueda ascendente de el menor dígito de un número
+  Precondición n >= 0
+*/
+
+public static int menorDig(int n){
+  if(n < 10){return n;}                                           //Caso base 
+  else{int x = menorDig(n/10);                                    //Caso general:variable recalculada para simplificar el problema
+       if(x < n%10){retun x;}                                     //Caso general
+       else{return n%10;}                                         //Caso general
+  }
+}
+
+/**Método recursivo para comprobación del juego del multichino
+  Precondición x >= 0  &&  0 <= pos < a.length
+*/
+public static boolean multichinos(int[]a,int x,int pos){                
+  if(pos == a.lenght-1){return a[pos] == x;}                      //Caso base de loguitud 1
+  else{if(a[pos] > x){return false;}                              //Error por defecto
+    else{if(x > 3*(a.lenght-1-pos+1)){return false;}}             //Error por exceso
+        else{return multichinos(a,x-a[pos],pos+1);}               //Llamada recursiva
+  }
+}
+
+/***/
