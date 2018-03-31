@@ -23,4 +23,10 @@ public static boolean multichinos(int[]a,int x,int pos){
   }
 }
 
-/***/
+/**Método recursivo suma de los numeros menores que n de un array m cualquiera*/
+public static int sumaMenores(int[] a,int x,int pos){
+  if(pos >= a.length){return 0;}
+  else{if(a[pos] <= x){return sumaMenores(a ,x ,pos++) + 1;}
+      else{reurn sumaMenores(a ,x ,pos++);}
+  }
+}
