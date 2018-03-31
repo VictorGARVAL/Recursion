@@ -29,4 +29,15 @@ public static int sumaMenores(int[] a,int x,int pos){
   else{if(a[pos] <= x){return sumaMenores(a ,x ,pos++) + 1;}
       else{reurn sumaMenores(a ,x ,pos++);}
   }
+  
+  //Precondición:sea pos un valor comprendido entre 0 y a.length
+public static boolean parYcreciente(int [] a,int pos) {
+	if(pos == a.length-1) {return a[pos]%2 == 0;}
+	else {
+		if(a[pos] < a[pos + 1] && a[pos]%2 == 0) {return parYcreciente(a,pos++);}
+		else {return false;}
+	}
+	
+	
+}
 }
